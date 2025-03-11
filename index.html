@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="images/x-icon" href="images/x-icon/favicon.ico">
+    <!-- Google Fonts Link -->
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="gallery.css">
+    <title>Gallery</title>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+
+    <h1>Gallery</h1>
+<div class="upload-container">
+    <label for="fileInput" class="custom-file-upload">Choose File</label>
+    <input type="file" id="fileInput">
+    <span id="fileName" style="display: none;"></span> <!-- Initially hidden -->
+    <button class="upload-btn" onclick="uploadFile()">Upload</button>
+</div>
+<h2 class="section">Images</h2>
+    <div id="images" class="gallery-container"></div>
+    <h2 class="section">Videos</h2>
+    <div id="videos" class="gallery-container"></div>
+
+    <h2 class="section">Music</h2>
+    <div id="music" class="gallery-container"></div>
+
+<script src="gallery.js"></script>
+
+</body>
+</html>

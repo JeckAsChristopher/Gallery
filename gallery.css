@@ -1,0 +1,211 @@
+/* Body */
+body {
+    text-align: center;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    font-family: 'Poppins', sans-serif;
+    margin: 10px;
+    color: white;
+    transition: 0.5s;
+}
+
+h1, h2, h3 {
+    font-family: 'Russo One', sans-serif;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Upload Box */
+.upload-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background: #e3e3e3;
+    border-radius: 10px;
+}
+
+/* Custom File Upload */
+input[type="file"] {
+    display: none;
+}
+
+#fileName {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+    font: bold;
+    opacity: 20%;
+}
+
+.custom-file-upload {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.custom-file-upload:hover {
+    background-color: #0056b3;
+}
+
+/* Upload Button */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Section Titles */
+.section-title {
+    margin-top: 40px;
+    font-size: 1.8rem;
+    color: #444;
+    font-weight: 700;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+/* Gallery Grid */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Media Card */
+.media-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.media-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling (Fixed Size) */
+.media-card img {
+    width: 100%;
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensures the image is cropped properly */
+    border-bottom: 2px solid #ddd;
+}
+
+/* Video and Audio */
+.media-card video {
+    width: 100%;
+    height: 200px; /* Fixed height */
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+.media-card audio {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .media-card img, .media-card video {
+        height: 150px;
+    }
+}
+
+img:hover, video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Image & Video Styles */
+img, video {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover, video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Audio Player */
+audio {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 5px;
+}
+
+
+.no-videos, .no-images, .no-music {
+    text-align: center;
+    font-size: 18px;
+    color: #fff; /* Optional: Adjust color */
+    margin-top: 20px;
+}
